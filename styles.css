@@ -172,6 +172,27 @@ body {
     z-index: 2;
 }
 
+.submenu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    list-style: none;
+    z-index: 100;
+    min-width: 150px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* Ocultar submenús por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+.submenu-container:hover > .submenu {
+    display: block;
+}
 
 /* Media query para pantallas pequeñas (menos de 768px) */
 @media only screen and (max-width: 768px) {
@@ -220,10 +241,32 @@ body {
     .navbar {
         justify-content: flex-end;
         padding: 0;
+        display: flex;
+        width: 80%;
+        height: 65px;
+        background-color: transparent;
+          margin-top: 0%;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
     }
-
     .nav_menu {
-        display: none;
+        flex-direction: column;
+        margin-right: 10px;
+        background-color: rgba(96, 125, 139, 0.5);
+        position: fixed;
+        right: 0;
+        top: 65px;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+        height: auto; 
+        overflow-y: auto;
+        right: -800px;
+        transition: 0.7s;
+    }
+    .nav-toggle {
+        display: block; /* Mostrar el botón de toggle */
     }
 
     .div_togle {
@@ -263,14 +306,51 @@ body {
             "img_cabecera   espacio  navbar"49% "img_cabecera   espacio  navbar"49% / 20% 20% 60%;
     }
 
-    .nav_menu {
+    .img_cabecera {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_cabecera_2 {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        border-radius: 30%;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .nav_menu {
+        display: flex; /* Mostrar el menú en pantallas grandes */
         flex-direction: row;
         gap: 10%;
     }
 
     .div_togle {
-        display: none;
-        /* Ocultar el botón de hamburguesa en pantallas grandes */
+        display: none; /* Ocultar el botón de toggle en pantallas grandes */
+    }
+
+    .submenu-container {
+        position: relative;
+    }
+
+    .submenu-container:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .submenu-right {
+        left: 100%;
+        top: 0;
+    }
+
+    .submenu {
+        left: -160px;
+        top: 0;
     }
 }

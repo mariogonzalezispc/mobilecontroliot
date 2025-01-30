@@ -1,7 +1,13 @@
-// Alternar visibilidad del menú en móviles
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+
+function menu() {
+    const navMenu = document.querySelector(".nav_menu");
+    const newRightValue = navMenu.style.right == "-10px" ? "-800px" : "-10px";
+    setTimeout(() => {
+      navMenu.style.right = newRightValue;
+      console.log('abrir menu')
+      if (newRightValue === "-800px") {
+        console.log('cerrar el menu')
+      }
+    }, 250);
+  }
