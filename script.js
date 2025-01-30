@@ -1,46 +1,34 @@
 function menu() {
-    const navMenu = document.querySelector(".nav_menu");
-    const newRightValue = navMenu.style.right == "-10px" ? "-800px" : "-10px";
-    setTimeout(() => {
-      navMenu.style.right = newRightValue;
-      if (newRightValue === "-800px") {
-        console.log('cerrar el menu')
-      }else{
-        console.log('abrir menu')
-      }
-    }, 250);
+  const navMenu = document.querySelector(".nav_menu");
+  const subProductos = document.querySelector(".sub_productos");
+  const navMenuRight = getComputedStyle(navMenu).right;
+  const newRightValue = navMenuRight === "0px" ? "-800px" : "0px";
+  setTimeout(() => {
+    navMenu.style.right = newRightValue;
+    if (newRightValue === "-800px") {
+      console.log('Cierro el menu principal');
+    } else {
+      console.log('Abro el menu principal');
+    }
+  }, 250);
+  if (getComputedStyle(subProductos).right === "0px") {
+    subProductos.style.right = "-800px";
+    console.log('Cierro el submenú de productos');
   }
+}
 
-  function productos_menu() {
-    menu();
-
-
-
-
-
-
-
-    const navMenu = document.querySelector(".produc");
-    const newRightValue = navMenu.style.left == "-10px" ? "-800px" : "-10px";
-    setTimeout(() => {
-      navMenu.style.right = newRightValue;
-      if (newRightValue === "-800px") {
-        console.log('cerrar el productos menu')
-      }else{
-        console.log('abrir productos menu')
-      }
-    }, 250);
-  }
-
-  function interfaces_menu() {
-    const navMenu = document.querySelector(".submenu_interfaces");
-    const newRightValue = navMenu.style.right == "-10px" ? "-800px" : "-10px";
-    setTimeout(() => {
-      navMenu.style.right = newRightValue;
-      if (newRightValue === "-800px") {
-        console.log('cerrar el interface menu')
-      }else{
-        console.log('abrir interfaces menu')       
-      }
-    }, 250);
-  }
+function sub_productos() {
+  const navMenu = document.querySelector(".nav_menu");
+  const subProductos = document.querySelector(".sub_productos");
+  menu();
+  const subProductosRight = getComputedStyle(subProductos).right;
+  const newRightValue = subProductosRight === "0px" ? "-800px" : "0px";
+  setTimeout(() => {
+    subProductos.style.right = newRightValue;
+    if (newRightValue === "-800px") {
+      console.log('Cierro el submenú de productos');
+    } else {
+      console.log('Abro el submenú de productos');
+    }
+  }, 250);
+}
