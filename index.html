@@ -24,23 +24,8 @@
                     <li class="contenedor_botones">
                         <button class="boton_nav">Inicio</button>
                     </li>
-                    <li class="contenedor_botones submenu-container">
-                        <button class="boton_nav submenu-toggle">Productos</button>
-                        <ul class="submenu">
-                            <li class="submenu-item submenu-container">
-                                <button class="boton_nav submenu-toggle">Interfaces Cell</button>
-                                <ul class="submenu submenu-right">
-                                    <li><button class="boton_nav">Cell 150</button></li>
-                                    <li><button class="boton_nav">Cell 200</button></li>
-                                    <li><button class="boton_nav">Cell 250</button></li>
-                                    <li><button class="boton_nav">Cell 300</button></li>
-                                    <li><button class="boton_nav">Cell SMS</button></li>
-                                </ul>
-                            </li>
-                            <li><button class="boton_nav">Home IoT</button></li>
-                            <li><button class="boton_nav">Agro IoT</button></li>
-                            <li><button class="boton_nav">Hidroponia IoT</button></li>
-                        </ul>
+                    <li class="contenedor_botones">
+                        <button class="boton_nav" onclick="productos_menu()">Productos</button>
                     </li>
                     <li class="contenedor_botones">
                         <button class="boton_nav">Contacto</button>
@@ -57,3 +42,21 @@
     <script src="./script.js"></script>
 </body>
 </html>
+
+
+
+<!-- <ul class="submenu">
+    <li class="submenu-item submenu-container">
+        <button class="boton_nav produc" style="display: none;" onclick="interfaces_menu()">Interfaces Cell</button>
+        <ul class="submenu_interfaces" style="display: none;">
+            <li><button class="boton_nav">Cell 150</button></li>
+            <li><button class="boton_nav">Cell 200</button></li>
+            <li><button class="boton_nav">Cell 250</button></li>
+            <li><button class="boton_nav">Cell 300</button></li>
+            <li><button class="boton_nav">Cell SMS</button></li>
+        </ul>
+    </li>
+    <li><button class="boton_nav porduc" style="display: none;">Home IoT</button></li>
+    <li><button class="boton_nav produc" style="display: none;">Agro IoT</button></li>
+    <li><button class="boton_nav porduc" style="display: none;">Hidroponia IoT</button></li>
+</ul> -->
