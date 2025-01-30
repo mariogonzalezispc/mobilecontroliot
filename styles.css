@@ -60,7 +60,6 @@ body {
         "navbar";
 }
 
-
 .img_cabecera {
     grid-area: img_cabecera;
     background-color: blue;
@@ -76,23 +75,51 @@ body {
     grid-area: navbar;
     background-color: yellowgreen;
     display: flex;
-    justify-content: space-around;
-    line-height: 80px;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
     width: 100%;
+    padding: 10px 0;
 }
 
-.nav_menu {
+
+.contenedor_botones {
     display: flex;
-    list-style: none;
-    gap: 0px;
-
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 5px 0px 0px;
+    line-height: 40px;
 }
-
 .boton_nav {
-    padding: 5px 10px;
-    border: none;
-    background-color: violet;
+    width: 98%;
+    height: 35px;
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    list-style: none;
+}
+.boton_nav:hover{
+    transform: scale(1.01);
+    opacity: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), /* Sombra externa suave */
+    -2px -2px 5px rgba(255, 255, 255, 0.8); /* Sombra clara para dar efecto de luz */
+    transition: all 0.1s ease;
     cursor: pointer;
+}
+.nav_menu {
+
+    display: inline-flex;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+
 }
 
 .productos {
@@ -122,7 +149,6 @@ body {
     line-height: 30px;
     display: block;
     z-index: 2;
-        
 }
 
 .nav-toggle:active {
@@ -131,34 +157,49 @@ body {
                 1px 1px 2px #ffffff;
 }
 
-
-
-
 /* Media query para pantallas pequeñas (menos de 768px) */
 @media only screen and (max-width: 768px) {
-
-
-
     .cabecera {
         display: grid;
         gap: 1%;
         grid-template:
             "img_cabecera   espacio  navbar"49% 
             "img_cabecera   espacio  navbar"49% / 
-            20%             60%       20%;
+            25%             55%       20%;
     }
 
-
-    
     .navbar {
-        justify-content: center;
+        justify-content: flex-end; /* Alinea los botones al fondo */
+        padding: 0;
     }
 
-    .div_togle{
-        display: flex;
+    .nav_menu {
+        display: none; /* Menú oculto por defecto */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
     }
-    .nav_menu{
-        display: none;
+
+    .nav-menu--visible {
+        display: flex; /* Menú visible cuando se activa */
+    }
+
+    .div_togle {
+        display: flex; /* Mostrar el botón de hamburguesa */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-toggle {
+        color: #7f8c8d;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: none;
+        font-size: 25px;
+        display: block;
+        z-index: 2;
     }
 }
 
@@ -172,11 +213,14 @@ body {
             "img_cabecera   espacio  navbar"49% / 
             20%             20%       60%;
     }
-    
+
     .nav_menu {
-        display: flex;
+        display: flex; 
+        flex-direction: row; 
+        gap: 10%;
     }
-    .div_togle{
-        display: none;
+
+    .div_togle {
+        display: none; /* Ocultar el botón de hamburguesa en pantallas grandes */
     }
 }
