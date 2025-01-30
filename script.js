@@ -12,6 +12,14 @@ function menu() {
   }
 
   function productos_menu() {
+    menu();
+
+
+
+
+
+
+
     const navMenu = document.querySelector(".produc");
     const newRightValue = navMenu.style.left == "-10px" ? "-800px" : "-10px";
     setTimeout(() => {
