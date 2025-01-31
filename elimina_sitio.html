@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Control IoT</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mobile">
+        <header class="cabecera">
+            <div class="img_cabecera">
+                <img class="img_cabecera_2" src="./img/radio_cell.png" ALT="">
+            </div>
+            <div class="espacio"></div>
+            <nav class="navbar">
+                <div class="div_togle">
+                    <button class="nav-toggle" id="nav-toggle" onclick="menu()" ALT="Menu de opciones">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="nav_menu">
+                    <li class="contenedor_botones">
+                        <button class="boton_nav">Inicio</button>
+                    </li>
+                    <li class="contenedor_botones">
+                        <button class="boton_nav" onclick="sub_productos()">Productos</button>
+                    </li>
+                    <ul class="sub_productos">
+                        <li class="contenedor_botones">
+                            <button class="boton_nav" onclick="interfaces_menu()">Interfaces Cell</button>
+                        </li>
+                        <li class="contenedor_botones">
+                            <button class="boton_nav porduc">Home IoT</button>
+                        </li>
+                        <li class="contenedor_botones">
+                            <button class="boton_nav produc">Agro IoT</button>
+                        </li>
+                        <li class="contenedor_botones">
+                            <button class="boton_nav porduc">Hidroponia IoT</button>
+                        </li>
+                    </ul>
+                    <li class="contenedor_botones">
+                        <button class="boton_nav">Contacto</button>
+                    </li>
+                    <li class="contenedor_botones">
+                        <button class="boton_nav"
+                            onclick="window.location.href='app_install.html'">Instalación</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="productos">
+            <h1>Aca va el manual de como se elimina un sitio en la app</h1>
+        </main>
+        <footer class="footer">Footer</footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
