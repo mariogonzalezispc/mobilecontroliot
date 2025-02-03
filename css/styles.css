@@ -6,8 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -29,13 +28,14 @@ body {
 }
 
 .img_cabecera img {
-    height: 40px;
+    height: 55px;
     border-radius: 10px;
 }
 
 h2 {
     font-size: 24px;
 }
+
 
 .navbar {
     position: relative;
@@ -45,35 +45,43 @@ h2 {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* Estilos para pantallas pequeñas */
+/* --------------------------------------------------------------------- */
+/* Aca empieza las configuraciones especificas para pantallas pequeñas */
+/* fijate aca para modificar el funcionamiento en el celu */
+/* --------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
+   
     .cabecera {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: blue;
-        color: white;
+        background-color: rgba(0, 128, 0,0.7);
+        padding: 12px;
     }
 
-    /* Imagen de cabecera */
     .img_cabecera img {
-        height: 40px;
+        height: 55px;
         border-radius: 10px;
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 18px;
+        margin-left: 10px; 
     }
 
     .div_togle {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+    }
+
+    .nav-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
     }
 
     .nav_menu {
@@ -106,9 +114,9 @@ h2 {
     }
 
     .productos {
-        font-size: 18px;
+        font-size: 16px;
         text-align: justify;
-        padding: 20px;
+        padding: 15px;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -116,8 +124,16 @@ h2 {
         overflow-y: auto;
     }
 
+    .terminos {
+        font-size: 16px; 
+        line-height: 1.6;
+        color: #333; 
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
     footer {
-        background-color: blue;
+        background-color: rgba(0, 128, 0,0.7);
         color: white;
         text-align: center;
         padding: 15px;
@@ -125,8 +141,12 @@ h2 {
     }
 }
 
-/* Estilos para pantallas grandes */
+/* --------------------------------------------------------------------- */
+/* Aca empieza las configuraciones especificas para pantallas Grandes PC */
+/* fijate aca para modificar el funcionamiento en la computadora */
+/* --------------------------------------------------------------------- */
 @media only screen and (min-width: 769px) {
+
     .nav_menu {
         display: flex;
         gap: 20px;
@@ -145,7 +165,7 @@ h2 {
     }
 
     .productos {
-        font-size: 24px;
+        font-size: 18px;
         text-align: justify;
         padding: 40px;
         display: flex;
@@ -155,17 +175,14 @@ h2 {
         overflow-y: auto;
     }
 
-    .productos {
-        flex-grow: 1;
-        background-color: #f4f4f4;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 20px;
-        text-align: justify;
-        height: calc(100vh - 120px);
-        overflow-y: auto;
+    .terminos {
+        font-size: 18px;
+        line-height: 1.8; 
+        color: #333;
+        padding: 15px 0;
+        margin-top: 20px;
     }
+
     footer {
         background-color: #222;
         color: white;
