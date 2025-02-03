@@ -12,14 +12,12 @@ html, body {
     flex-direction: column;
 }
 
-/* Contenedor principal */
 .mobile {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Cabecera */
 .cabecera {
     display: flex;
     align-items: center;
@@ -29,7 +27,6 @@ html, body {
     color: white;
 }
 
-/* Imagen de cabecera */
 .img_cabecera img {
     height: 55px;
     border-radius: 10px;
@@ -39,7 +36,7 @@ h2 {
     font-size: 24px;
 }
 
-/* Estilos del menú */
+
 .navbar {
     position: relative;
 }
@@ -57,7 +54,7 @@ h2 {
 /* fijate aca para modificar el funcionamiento en el celu */
 /* --------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
-    /* Cabecera */
+   
     .cabecera {
         background-color: rgba(0, 128, 0,0.7);
         padding: 12px;
@@ -149,7 +146,7 @@ h2 {
 /* fijate aca para modificar el funcionamiento en la computadora */
 /* --------------------------------------------------------------------- */
 @media only screen and (min-width: 769px) {
-    /* Menú de navegación horizontal */
+
     .nav_menu {
         display: flex;
         gap: 20px;
@@ -167,7 +164,6 @@ h2 {
         cursor: pointer;
     }
 
-    /* Estilo para la sección de productos (texto dentro de terminos) */
     .productos {
         font-size: 18px;
         text-align: justify;
@@ -181,7 +177,7 @@ h2 {
 
     .terminos {
         font-size: 18px;
-        line-height: 1.8; /* Mejor espacio entre líneas para texto largo */
+        line-height: 1.8; 
         color: #333;
         padding: 15px 0;
         margin-top: 20px;
