@@ -31,7 +31,7 @@ html, body {
 
 /* Imagen de cabecera */
 .img_cabecera img {
-    height: 40px;
+    height: 55px;
     border-radius: 10px;
 }
 
@@ -48,29 +48,43 @@ h2 {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* Estilos para pantallas pequeñas */
+/* --------------------------------------------------------------------- */
+/* Aca empieza las configuraciones especificas para pantallas pequeñas */
+/* fijate aca para modificar el funcionamiento en el celu */
+/* --------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
     /* Cabecera */
     .cabecera {
-        background-color: blue; /* Cambié a azul para mejor visibilidad en móviles */
+        background-color: rgba(0, 128, 0,0.7);
         padding: 12px;
     }
 
-    /* Título de la cabecera */
-    h2 {
-        font-size: 18px;
-        margin-left: 10px; /* Para que no esté pegado al borde */
+    .img_cabecera img {
+        height: 55px;
+        border-radius: 10px;
     }
 
-    /* Menú de navegación */
+    h2 {
+        font-size: 18px;
+        margin-left: 10px; 
+    }
+
     .div_togle {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+    }
+
+    .nav-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
     }
 
     .nav_menu {
@@ -89,7 +103,6 @@ h2 {
         display: flex;
     }
 
-    /* Botones del menú */
     .contenedor_botones {
         text-align: right;
         padding: 10px;
@@ -103,7 +116,6 @@ h2 {
         cursor: pointer;
     }
 
-    /* Estilo para la sección de productos (texto dentro de terminos) */
     .productos {
         font-size: 16px;
         text-align: justify;
@@ -111,20 +123,20 @@ h2 {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        height: calc(100vh - 120px); /* Ajusta el contenido a la pantalla sin desbordes */
+        height: calc(100vh - 120px);
         overflow-y: auto;
     }
 
     .terminos {
-        font-size: 16px; /* Tamaño de texto más pequeño en móviles */
+        font-size: 16px; 
         line-height: 1.6;
-        color: #333; /* Color de texto oscuro para mejor legibilidad */
+        color: #333; 
         padding: 10px 0;
         margin-top: 10px;
     }
 
     footer {
-        background-color: blue;
+        background-color: rgba(0, 128, 0,0.7);
         color: white;
         text-align: center;
         padding: 15px;
@@ -132,7 +144,10 @@ h2 {
     }
 }
 
-/* Estilos para pantallas grandes */
+/* --------------------------------------------------------------------- */
+/* Aca empieza las configuraciones especificas para pantallas Grandes PC */
+/* fijate aca para modificar el funcionamiento en la computadora */
+/* --------------------------------------------------------------------- */
 @media only screen and (min-width: 769px) {
     /* Menú de navegación horizontal */
     .nav_menu {
