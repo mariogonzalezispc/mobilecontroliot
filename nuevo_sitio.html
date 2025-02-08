@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Control IoT</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mobile">
+        <header class="cabecera">
+            <div class="img_cabecera">
+                <img class="img_cabecera_2" src="./img/radio_cell.png" ALT="">
+            </div>
+            <div class="espacio">
+                <h2>Nuevo Sitio</h2>
+            </div>
+            <nav class="navbar">
+                <div class="div_togle">
+                    <button class="nav-toggle" id="nav-toggle" onclick="menu()" ALT="Menu de opciones">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="nav_menu">
+                    <li class="contenedor_botones"><button class="boton_nav">Inicio</button></li>
+                    <li class="contenedor_botones"><button class="boton_nav">Productos</button></li>
+                    <li class="contenedor_botones"><button class="boton_nav">Contacto</button></li>
+                    <li class="contenedor_botones"><button class="boton_nav">Instalación</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="productos">
+            <div class="terminos">
+                <p>Cargue el nombre del sitio (por ejemplo, "Mi Casa"), el tipo de equipo (en este caso, 250) y va a tener un ID de equipo número XXXXXXXXXXX, 12 caracteres.</p>  
+                <p>Escriba una clave y un nombre de usuario (puede ser su nombre).</p>  
+                <p>¿Qué es la entrada asistida y cómo funciona?
+                    <br>La entrada asistida es una función que permite ingresar a su sitio previo haber desactivado su alarma. 
+                    <br>Se controla desde la aplicación en su teléfono y debe configurarse al momento de crear el sitio.
+                    <br>
+                    ¿Cómo funciona?
+                    <br>
+                    * Configuración previa: Al crear su sitio, usted elige si quiere habilitar la entrada asistida y el tiempo de tolerancia en minutos (por ejemplo, 5 minutos, recomendable).
+                    <br>
+                    *Uso desde la app: Cuando llegue a su hogar, debe presionar el botón "Ingreso Asistido" en la aplicación.
+                    <br>
+                    * Tiempo de tolerancia: Una vez activado el ingreso asistido, tendrá el tiempo previamente configurado (por ejemplo, 5 minutos) para desactivar la alarma ingresando la clave del sitio.
+                    <br>
+                    * Consecuencia de no desarmar a tiempo: Si no ingresa la clave dentro del tiempo establecido, se generará una alerta automática para los usuarios suscritos al mismo sitio.
+                    <br>
+                    ¿Para qué sirve?
+                    Esta opción es útil para evitar falsas alarmas y proporcionar un margen de tiempo para ingresar cómodamente sin activar alertas de seguridad.</p>
+                <br>  
+                <p>Presione si quiere tener una clave en el desarmado.(Quiere que le pida clave cuando presione Desarmar)
+                <br>
+                     ¿Quiere que le lleguen notificaciones de:? (Presione para elegir entre Si y No)
+                <br> * emergencias
+                <br> * aperturas y cierres
+                <br> * de mantenimiento 
+                <br> * test automático.</p> <br> 
+                <p>Presione el botón guardar. Ya está creado su sitio.</p>  
+                  
+            </div>
+        </main>
+        <footer class="footer">
+            <h3>M & M Desarrollos</h3>
+            <h4>© Copyright 2025</h4>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
