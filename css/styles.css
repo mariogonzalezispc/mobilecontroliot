@@ -143,6 +143,13 @@ h2 {
     .footer h3 h4 {
         text-size-adjust: 100%;
     }
+    .imagen-centrada {
+        display: flex;
+        margin: auto;
+        width: 70%;  /* Ajusta el tamaño según lo necesites */
+        height: auto; /* Mantiene la proporción */
+    }
+    
 }
 
 /* --------------------------------------------------------------------- */
@@ -194,4 +201,11 @@ h2 {
         padding: 15px;
         flex-shrink: 0;
     }
+    .imagen-centrada {
+        display: block;
+        margin: auto;
+        width: 40%;  /* Ajusta el tamaño según lo necesites */
+        height: auto; /* Mantiene la proporción */
+    }
+    
 }
