@@ -110,7 +110,7 @@ h2 {
         background: none;
         border: none;
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         cursor: pointer;
     }
 
@@ -160,7 +160,7 @@ h2 {
 
     .nav_menu {
         display: flex;
-        gap: 20px;
+        gap: 1px;
     }
 
     .contenedor_botones {
@@ -171,7 +171,7 @@ h2 {
         background: none;
         border: none;
         color: white;
-        font-size: 18px;
+        font-size: 14px;
         cursor: pointer;
     }
 
@@ -208,4 +208,199 @@ h2 {
         height: auto; /* Mantiene la proporción */
     }
     
+}
+
+/* ==========================================================================
+   Estilos Neumórficos (Solo para prueba en index.html)
+   ========================================================================== */
+
+.neumorphic-test {
+    --nm-bg: rgba(226, 237, 226, 0.9); /* Verde un 5% más oscuro y semi-transparente */
+    --nm-shadow-dark: #b1c5b1; /* Sombra oscurecida para mantener el contraste neumórfico */
+    --nm-shadow-light: #ffffff;
+    --nm-text: #2d3e2d; /* Texto en un verde muy oscuro para mejor contraste */
+    --nm-accent: #4caf50; /* Verde de acento para iconos y resaltados */
+    
+    background-color: var(--nm-bg) !important;
+    color: var(--nm-text);
+}
+
+.neumorphic-test .cabecera {
+    background-color: var(--nm-bg) !important;
+    color: var(--nm-text) !important;
+    box-shadow: 8px 8px 16px var(--nm-shadow-dark), -8px -8px 16px var(--nm-shadow-light) !important;
+    border-radius: 0 0 20px 20px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.neumorphic-test .footer {
+    background-color: var(--nm-bg) !important;
+    color: var(--nm-text) !important;
+    box-shadow: 8px 8px 16px var(--nm-shadow-dark), -8px -8px 16px var(--nm-shadow-light) !important;
+    border-radius: 20px 20px 0 0;
+    margin-top: auto;
+    padding: 15px 20px !important;
+    border: none;
+}
+
+.neumorphic-test .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.neumorphic-test .footer-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.neumorphic-test .footer-info-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.neumorphic-test .info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.neumorphic-test .info-item span {
+    font-size: 0.8rem; /* 20% más pequeño que el estándar */
+}
+
+.neumorphic-test .nm-icon {
+    width: 36.8px;
+    height: 36.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--nm-bg);
+    color: var(--nm-text);
+    box-shadow: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light);
+    transition: all 0.3s ease;
+    font-size: 1.01rem;
+    flex-shrink: 0;
+}
+
+.neumorphic-test .nm-icon:hover {
+    color: var(--nm-accent);
+    box-shadow: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light);
+    transform: none;
+}
+
+.neumorphic-test .footer a:hover {
+    text-decoration: underline;
+}
+
+.neumorphic-test .footer strong {
+    color: #333; /* Color más oscuro para el texto en negrita */
+}
+
+.neumorphic-test .footer .copyright {
+    font-size: 0.85em; /* Tamaño de fuente más pequeño para el copyright */
+    opacity: 0.7; /* Ligeramente transparente */
+}
+
+.neumorphic-test h2 {
+    color: #444 !important;
+}
+
+.neumorphic-test .boton_nav {
+    background-color: var(--nm-bg);
+    color: var(--nm-text);
+    border: none;
+    padding: 9px 18px;
+    font-size: 14px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px var(--nm-shadow-dark), -5px -5px 10px var(--nm-shadow-light);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    margin: 5.4px;
+}
+
+.neumorphic-test .boton_nav:hover {
+    box-shadow: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light);
+    transform: translateY(-1px);
+}
+
+.neumorphic-test .boton_nav:active {
+    box-shadow: 5px 5px 10px var(--nm-shadow-dark), -5px -5px 10px var(--nm-shadow-light) !important;
+    transform: none !important;
+}
+
+.neumorphic-test .nm-icon:active {
+    box-shadow: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light) !important;
+    transform: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .neumorphic-test .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        background: var(--nm-bg);
+        color: var(--nm-text);
+        box-shadow: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light);
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .neumorphic-test .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .neumorphic-test .footer-brand {
+        text-align: right;
+        align-self: flex-end;
+        font-size: 0.8rem;
+        margin-top: 15px;
+        order: 2;
+    }
+
+    .neumorphic-test .footer-copy {
+        font-size: 0.8rem;
+    }
+
+    .neumorphic-test .footer-info-list {
+        flex-direction: column; /* Cambiamos a columna para alinear los iconos */
+        align-items: flex-start; /* Alinea los iconos en una línea vertical */
+        width: fit-content;      /* Hace que el contenedor solo ocupe el ancho necesario */
+        margin: 10px 0 0;        /* Alineado a la izquierda para coincidir con el logo */
+        gap: 12px;               /* Espaciado vertical entre items */
+        order: 1;
+    }
+
+    .neumorphic-test .nav_menu {
+        display: flex;
+        position: fixed;
+        top: 85px;
+        right: -800px; /* Estado inicial fuera de pantalla para el script.js */
+        width: 200px;
+        height: auto;
+        background: var(--nm-bg) !important;
+        box-shadow: -8px 8px 16px var(--nm-shadow-dark), -2px -2px 10px var(--nm-shadow-light);
+        border-radius: 20px 0 0 20px;
+        padding: 20px 10px;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .neumorphic-test .contenedor_botones {
+        width: 100%;
+        text-align: center;
+    }
 }
